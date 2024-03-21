@@ -1,0 +1,55 @@
+abstrak class Bangun_Datar{
+  double luas();
+  double keliling();
+}
+
+class Persegi extends Bangun_Datar {
+  late double sisi;
+  Persegi(this.s);
+  @override
+  double luas() {
+    return s * s;
+  }
+  @override
+  double keliling() {
+    return 4 * s;
+  }
+}
+
+class Segitiga extends Bangun_Datar {
+  late double alas;
+  late double t;
+  late double s1;
+  late double s2;
+  late double s3;
+  Segitiga(this.alas, this.t, this.s1, this.s2, this.s3);
+  @override
+  double luas() {
+    return 0.5 * alas * t;
+  }
+  @override
+  double keliling() {
+    return s1 + s2 + s3;
+  }
+}
+
+class Lingkaran extends BangunDatar {
+  late double r;
+  Lingkaran(this.r);
+  @override
+  double luas() {
+    return 3.14 * r * r;
+  }
+  @override
+  double keliling() {
+    return 2 * 3.14 * r;
+  }
+}
+
+void main() {
+  Persegi persegi = Persegi("6");
+
+  print("Luas Persegi adalah ${persegi.luas()} cm persegi");
+  print("Keliling Persegi adalah ${persegi.keliling()} cm");
+
+}
